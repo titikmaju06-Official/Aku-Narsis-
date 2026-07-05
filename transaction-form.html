@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Input Transaksi</title>
+  <link rel="stylesheet" href="transaction-form.css">
+</head>
+<body>
+  <main class="transaction-page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Inline Data Entry</p>
+        <h1>Input Transaksi Pembelian</h1>
+        <p class="lead">Form satu layar untuk pencatatan barang, kuantitas, harga, dan total transaksi secara cepat.</p>
+      </div>
+      <div class="header-kpi">
+        <span>Total Transaksi</span>
+        <strong id="grandTotalDisplay">Rp 0</strong>
+      </div>
+    </header>
+
+    <section class="transaction-shell" aria-label="Form transaksi pembelian">
+      <form id="transactionForm">
+        <section class="form-header" aria-label="Informasi umum transaksi">
+          <label class="field">
+            <span>Tanggal</span>
+            <input id="transactionDate" type="date" name="transactionDate">
+          </label>
+
+          <label class="field">
+            <span>Nomor Transaksi</span>
+            <input id="transactionNumber" type="text" name="transactionNumber" value="TRX-2026-0001" autocomplete="off">
+          </label>
+
+          <label class="field field-wide">
+            <span>Supplier</span>
+            <input type="text" name="supplier" placeholder="Nama supplier / vendor" autocomplete="organization">
+          </label>
+
+          <label class="field">
+            <span>Termin</span>
+            <select name="paymentTerm">
+              <option>Tunai</option>
+              <option>Net 7</option>
+              <option>Net 14</option>
+              <option>Net 30</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="entry-panel" aria-labelledby="detail-title">
+          <div class="entry-toolbar">
+            <div>
+              <h2 id="detail-title">Detail Barang</h2>
+              <p>Gunakan tombol tambah baris untuk mencatat item transaksi berikutnya.</p>
+            </div>
+            <button id="addRowBtn" class="secondary-button" type="button">+ Tambah Baris</button>
+          </div>
+
+          <div class="entry-table" role="table" aria-label="Tabel input detail transaksi">
+            <div class="entry-row entry-head" role="row">
+              <div role="columnheader">Nama Barang</div>
+              <div role="columnheader">Kuantitas</div>
+              <div role="columnheader">Satuan</div>
+              <div role="columnheader">Harga Satuan</div>
+              <div role="columnheader">Total</div>
+              <div role="columnheader">Aksi</div>
+            </div>
+
+            <div id="rowsContainer" class="rows-container"></div>
+          </div>
+        </section>
+
+        <section class="summary-panel" aria-label="Ringkasan transaksi">
+          <label class="note-field">
+            <span>Catatan</span>
+            <textarea name="notes" rows="4" placeholder="Catatan internal, nomor PO, atau instruksi pembayaran"></textarea>
+          </label>
+
+          <div class="summary-card">
+            <div>
+              <span>Jumlah Baris</span>
+              <strong id="rowCountDisplay">0</strong>
+            </div>
+            <div>
+              <span>Total Kuantitas</span>
+              <strong id="quantityDisplay">0</strong>
+            </div>
+            <div class="grand-total">
+              <span>Grand Total</span>
+              <strong id="grandTotalSummary">Rp 0</strong>
+            </div>
+          </div>
+        </section>
+
+        <footer class="form-actions">
+          <button class="ghost-button" type="reset">Reset Form</button>
+          <button class="primary-button" type="submit">Simpan Transaksi</button>
+        </footer>
+      </form>
+    </section>
+  </main>
+
+  <template id="rowTemplate">
+    <div class="entry-row data-row" role="row">
+      <div role="cell">
+        <input class="item-name" type="text" name="itemName[]" placeholder="Contoh: Kertas A4" autocomplete="off">
+      </div>
+      <div role="cell">
+        <input class="quantity" type="number" name="quantity[]" min="0" step="0.01" value="1" inputmode="decimal">
+      </div>
+      <div role="cell">
+        <select class="unit" name="unit[]">
+          <option>Pcs</option>
+          <option>Box</option>
+          <option>Pack</option>
+          <option>Kg</option>
+          <option>Liter</option>
+          <option>Meter</option>
+        </select>
+      </div>
+      <div role="cell">
+        <input class="unit-price" type="number" name="unitPrice[]" min="0" step="100" value="0" inputmode="numeric">
+      </div>
+      <div role="cell">
+        <output class="line-total" name="lineTotal[]">Rp 0</output>
+      </div>
+      <div role="cell">
+        <button class="row-action" type="button" aria-label="Hapus baris">Hapus</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="transaction-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aku Narsis? | Tes Psikologi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <nav class="top-nav" aria-label="Navigasi utama">
+      <button class="brand-button" type="button" data-go-home>
+        <img src="Logo Icon/Aku Narsis.png" alt="" aria-hidden="true">
+        <span>Aku Narsis?</span>
+      </button>
+      <div class="nav-actions">
+        <button type="button" data-go-home>Beranda</button>
+        <button type="button" data-start-test="npi">Tes NPI</button>
+        <button type="button" data-start-test="pni">Tes PNI</button>
+        <button type="button" data-start-test="narq">Tes NARQ</button>
+        <button type="button" data-start-test="sd3">Tes Dark Triad</button>
+        <button type="button" data-open-settings>Pengaturan</button>
+      </div>
+    </nav>
+
+    <div class="header-inner" id="heroHeader">
+      <div class="hero-copy">
+        <img class="hero-logo" src="Logo Icon/Aku Narsis.png" alt="Aku Narsis?">
+        <p class="eyebrow" id="heroEyebrow">Ruang refleksi psikologi diri</p>
+        <h1 id="heroTitle">Aku Narsis?</h1>
+        <p class="lead" id="heroLead">
+          Pilih tes untuk memahami pola narsisme dari dua sudut: sifat narsisme umum melalui NPI
+          dan dinamika narsisme maladaptif melalui PNI versi edukatif.
+        </p>
+      </div>
+      <div class="hero-panel" aria-label="Ringkasan aplikasi">
+        <div>
+          <span class="metric-value">4</span>
+          <span class="metric-label">Pilihan tes</span>
+        </div>
+        <div>
+          <span class="metric-value">137</span>
+          <span class="metric-label">Total item refleksi</span>
+        </div>
+        <div>
+          <span class="metric-value">23</span>
+          <span class="metric-label">Subskala gabungan</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="homeView" class="home-view">
+      <div class="home-heading">
+        <p class="eyebrow">Pilih asesmen</p>
+        <h2>Mulai dari tes yang paling sesuai</h2>
+        <p>
+          NPI cocok untuk melihat sifat narsisme umum/non-klinis. PNI mengenali pola grandiose
+          dan vulnerable yang lebih maladaptif. NARQ membedakan strategi Admiration dan Rivalry.
+          Dark Triad memetakan Narsisme, Machiavellianisme, dan Psikopati.
+        </p>
+      </div>
+
+      <div class="test-cards">
+        <article class="test-card">
+          <img class="test-icon" src="Logo Icon/NPI.png" alt="" aria-hidden="true">
+          <div>
+            <span class="test-badge">NPI-40</span>
+            <h3>Tes NPI</h3>
+            <p>
+              40 pasang pernyataan forced-choice untuk mengukur kecenderungan narsisme
+              subklinis atau umum, dengan skor 0-40 dan 7 subskala.
+            </p>
+          </div>
+          <dl class="card-specs">
+            <div><dt>Format</dt><dd>Pilih A/B</dd></div>
+            <div><dt>Item</dt><dd>40 pasangan</dd></div>
+            <div><dt>Hasil</dt><dd>Skor total + subskala</dd></div>
+          </dl>
+          <button class="primary-button" type="button" data-start-test="npi">Mulai Tes NPI</button>
+        </article>
+
+        <article class="test-card">
+          <img class="test-icon" src="Logo Icon/PNI.png" alt="" aria-hidden="true">
+          <div>
+            <span class="test-badge">PNI-52</span>
+            <h3>Test PNI</h3>
+            <p>
+              52 pernyataan skala Likert 0-5 untuk memetakan grandiosity dan vulnerability
+              berdasarkan 7 subskala Pathological Narcissism Inventory.
+            </p>
+          </div>
+          <dl class="card-specs">
+            <div><dt>Format</dt><dd>Likert 0-5</dd></div>
+            <div><dt>Item</dt><dd>52 pernyataan</dd></div>
+            <div><dt>Hasil</dt><dd>Dimensi + subskala</dd></div>
+          </dl>
+          <button class="primary-button" type="button" data-start-test="pni">Mulai Test PNI</button>
+        </article>
+
+        <article class="test-card">
+          <img class="test-icon" src="Logo Icon/NARQ.png" alt="" aria-hidden="true">
+          <div>
+            <span class="test-badge">NARQ-18</span>
+            <h3>Tes NARQ</h3>
+            <p>
+              18 pernyataan skala Likert 1-6 untuk membedakan strategi Admiration
+              yang promotif dan Rivalry yang defensif dalam mempertahankan citra diri megah.
+            </p>
+          </div>
+          <dl class="card-specs">
+            <div><dt>Format</dt><dd>Likert 1-6</dd></div>
+            <div><dt>Item</dt><dd>18 pernyataan</dd></div>
+            <div><dt>Hasil</dt><dd>Admiration + Rivalry</dd></div>
+          </dl>
+          <button class="primary-button" type="button" data-start-test="narq">Mulai Tes NARQ</button>
+        </article>
+
+        <article class="test-card">
+          <img class="test-icon" src="Logo Icon/DARK TRIAD.png" alt="" aria-hidden="true">
+          <div>
+            <span class="test-badge">SD3-27</span>
+            <h3>Tes Dark Triad</h3>
+            <p>
+              27 pernyataan skala Likert 1-5 untuk memetakan tiga sifat gelap:
+              Narsisme, Machiavellianisme, dan Psikopati.
+            </p>
+          </div>
+          <dl class="card-specs">
+            <div><dt>Format</dt><dd>Likert 1-5</dd></div>
+            <div><dt>Item</dt><dd>27 pernyataan</dd></div>
+            <div><dt>Hasil</dt><dd>3 skor terpisah</dd></div>
+          </dl>
+          <button class="primary-button" type="button" data-start-test="sd3">Mulai Tes Dark Triad</button>
+        </article>
+      </div>
+
+      <section class="reference-panel">
+        <h2>Catatan Penggunaan</h2>
+        <p>
+          Semua hasil di aplikasi ini bersifat edukatif dan reflektif. Tes tidak boleh digunakan
+          untuk mendiagnosis gangguan jiwa atau menggantikan asesmen psikolog/psikiater.
+        </p>
+      </section>
+    </section>
+
+    <section id="settingsView" class="settings-view" hidden>
+      <div class="settings-shell">
+        <aside class="settings-sidebar" aria-label="Menu pengaturan">
+          <div>
+            <p class="eyebrow">Menu</p>
+            <h2>Pengaturan</h2>
+          </div>
+          <div class="settings-tabs" role="tablist" aria-label="Tabsheet pengaturan">
+            <button class="settings-tab active" type="button" role="tab" aria-selected="true" data-settings-tab="general">General</button>
+            <button class="settings-tab" type="button" role="tab" aria-selected="false" data-settings-tab="theme">Tema</button>
+            <button class="settings-tab" type="button" role="tab" aria-selected="false" data-settings-tab="history">Riwayat</button>
+            <button class="settings-tab" type="button" role="tab" aria-selected="false" data-settings-tab="access">Manajemen Akses</button>
+          </div>
+          <button class="ghost-button" type="button" data-go-home>Kembali ke Beranda</button>
+        </aside>
+
+        <div class="settings-content">
+          <section class="settings-pane active" data-settings-pane="general" aria-labelledby="generalSettingsTitle">
+            <div class="settings-pane-heading">
+              <p class="eyebrow">General</p>
+              <h2 id="generalSettingsTitle">Preferensi Umum</h2>
+            </div>
+            <div class="settings-grid">
+              <label class="settings-field">
+                <span>Bahasa</span>
+                <select id="settingLanguage">
+                  <option value="id">Indonesia</option>
+                  <option value="en">English</option>
+                </select>
+              </label>
+              <label class="settings-field">
+                <span>Font</span>
+                <select id="settingFont">
+                  <option value="Arial, Helvetica, sans-serif">Arial</option>
+                  <option value="'Segoe UI', Arial, sans-serif">Segoe UI</option>
+                  <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet MS</option>
+                  <option value="Georgia, serif">Georgia</option>
+                </select>
+              </label>
+              <label class="settings-field">
+                <span>Size Font</span>
+                <input id="settingFontSize" type="range" min="14" max="20" step="1">
+                <strong id="fontSizeValue">16px</strong>
+              </label>
+              <label class="settings-field">
+                <span>Nama User</span>
+                <input id="settingUserName" type="text" placeholder="Nama user aplikasi">
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-pane" data-settings-pane="theme" aria-labelledby="themeSettingsTitle">
+            <div class="settings-pane-heading">
+              <p class="eyebrow">Tema</p>
+              <h2 id="themeSettingsTitle">Warna Aurora</h2>
+            </div>
+            <div class="settings-grid color-grid">
+              <label class="settings-field">
+                <span>Accent</span>
+                <input id="themeAccent" type="color">
+              </label>
+              <label class="settings-field">
+                <span>Pink / Rose</span>
+                <input id="themeRose" type="color">
+              </label>
+              <label class="settings-field">
+                <span>Mint</span>
+                <input id="themeMint" type="color">
+              </label>
+              <label class="settings-field">
+                <span>Blue</span>
+                <input id="themeBlue" type="color">
+              </label>
+              <label class="settings-field">
+                <span>Gold</span>
+                <input id="themeGold" type="color">
+              </label>
+            </div>
+            <div class="settings-actions">
+              <button id="resetThemeBtn" class="ghost-button" type="button">Reset Tema</button>
+            </div>
+          </section>
+
+          <section class="settings-pane" data-settings-pane="history" aria-labelledby="historyTitle">
+            <div class="history-panel">
+              <div class="history-heading">
+                <div>
+                  <p class="eyebrow">Riwayat</p>
+                  <h2 id="historyTitle">Riwayat Test</h2>
+                </div>
+                <div class="history-actions">
+                  <button id="seedHistoryBtn" class="ghost-button" type="button">Muat Contoh</button>
+                  <button id="printHistoryBtn" class="ghost-button" type="button">Print / PDF</button>
+                  <button id="whatsappHistoryBtn" class="ghost-button" type="button">WhatsApp</button>
+                  <button id="emailHistoryBtn" class="ghost-button" type="button">Email</button>
+                  <button id="shareHistoryBtn" class="ghost-button" type="button">Bluetooth / Lainnya</button>
+                  <button id="clearHistoryBtn" class="ghost-button" type="button">Bersihkan</button>
+                </div>
+              </div>
+              <div id="historyList" class="history-list"></div>
+            </div>
+          </section>
+
+          <section class="settings-pane" data-settings-pane="access" aria-labelledby="accessSettingsTitle">
+            <div class="settings-pane-heading">
+              <p class="eyebrow">Akses</p>
+              <h2 id="accessSettingsTitle">Manajemen Akses</h2>
+              <p>Jika belum ada user, aplikasi berjalan tanpa login. Tambahkan user untuk mengaktifkan hak akses.</p>
+            </div>
+            <div class="access-layout">
+              <form id="accessForm" class="access-form">
+                <label class="settings-field">
+                  <span>Nama Login</span>
+                  <input id="accessUserName" type="text" placeholder="contoh: admin">
+                </label>
+                <label class="settings-field">
+                  <span>Role / Hak Akses</span>
+                  <select id="accessRole">
+                    <option value="Admin">Admin</option>
+                    <option value="Operator">Operator</option>
+                    <option value="Viewer">Viewer</option>
+                  </select>
+                </label>
+                <button class="primary-button" type="submit">Tambah User</button>
+                <p id="accessMessage" class="missing-text" role="status"></p>
+              </form>
+              <div>
+                <h3>User Login</h3>
+                <div id="accessList" class="access-list"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="testView" class="test-view" hidden>
+      <section id="participantPanel" class="participant-panel" aria-labelledby="participantTitle">
+        <div>
+          <p class="eyebrow">Data peserta</p>
+          <h2 id="participantTitle">Isi data sebelum mulai test</h2>
+          <p>Nama dan usia wajib diisi agar hasil dapat disimpan ke Riwayat Test.</p>
+        </div>
+        <form id="participantForm" class="participant-form">
+          <label>
+            <span>Nama</span>
+            <input id="participantName" type="text" autocomplete="name" placeholder="Masukkan nama peserta" required>
+          </label>
+          <label>
+            <span>Usia</span>
+            <input id="participantAge" type="number" min="5" max="120" inputmode="numeric" placeholder="Usia" required>
+          </label>
+          <button class="primary-button" type="submit">Mulai Mengisi</button>
+          <p id="participantError" class="missing-text" role="status"></p>
+        </form>
+      </section>
+
+      <section class="intro-panel test-content" aria-labelledby="testTitle">
+        <div class="intro-copy">
+          <h2 id="testTitle">Tes</h2>
+          <div id="testInstructions"></div>
+        </div>
+        <aside class="notice">
+          <strong id="noticeTitle">Catatan penting</strong>
+          <p id="noticeText"></p>
+        </aside>
+      </section>
+
+      <section class="toolbar test-content" aria-label="Kontrol tes">
+        <div>
+          <strong id="progressText">0 terjawab</strong>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="progress-stats" aria-label="Statistik progres">
+          <span><strong id="answeredCount">0</strong> dijawab</span>
+          <span><strong id="remainingCount">0</strong> tersisa</span>
+        </div>
+        <button id="resetBtn" class="ghost-button" type="button">Reset</button>
+      </section>
+
+      <form id="quizForm" class="question-list test-content"></form>
+
+      <section class="actions test-content" aria-label="Aksi hasil">
+        <button id="scoreBtn" class="primary-button" type="button">Lihat Hasil</button>
+        <button class="ghost-button" type="button" data-go-home>Kembali ke Beranda</button>
+        <p id="missingText" class="missing-text" role="status"></p>
+      </section>
+
+      <section id="resultPanel" class="result-panel" aria-live="polite" hidden>
+        <div class="result-header">
+          <div>
+            <p class="eyebrow">Laporan hasil</p>
+            <h2 id="resultTitle">Profil</h2>
+            <p id="scoreDescription" class="result-intro"></p>
+          </div>
+          <span id="scoreLevelTag" class="level-tag">-</span>
+        </div>
+
+        <div class="result-dashboard">
+          <article class="score-card">
+            <span class="score-caption" id="scoreCaption">Skor total</span>
+            <div class="score-number"><span id="scoreValue">0</span><small id="scoreMax">/40</small></div>
+            <h3 id="scoreLabel">-</h3>
+            <div class="score-meter" aria-hidden="true">
+              <div id="scoreMeter" class="score-meter-fill"></div>
+            </div>
+            <div class="score-range" id="scoreRange">-</div>
+          </article>
+
+          <div class="summary-grid" id="resultSummaryGrid"></div>
+        </div>
+
+        <div class="detail-layout">
+          <section class="profile-card" aria-labelledby="profil-ringkas">
+            <h3 id="profil-ringkas">Ringkasan Profil</h3>
+            <p id="profileNarrative"></p>
+            <div class="dominant-box">
+              <span>Subskala paling menonjol</span>
+              <strong id="dominantText">-</strong>
+            </div>
+          </section>
+
+          <section class="profile-card" aria-labelledby="arahan-refleksi">
+            <h3 id="arahan-refleksi">Arahan Refleksi</h3>
+            <ul id="guidanceList" class="guidance-list"></ul>
+          </section>
+        </div>
+
+        <section id="dimensionSection" class="dimension-section" hidden>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Rincian dimensi</p>
+              <h3>Grandiosity vs Vulnerability</h3>
+            </div>
+            <p>Dimensi ini membantu melihat apakah skor lebih dominan pada pola megah/sombong atau rapuh/sensitif.</p>
+          </div>
+          <div class="dimension-grid" id="dimensionGrid"></div>
+        </section>
+
+        <section class="scale-section" aria-labelledby="rincian-subskala">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Rincian skor</p>
+              <h3 id="rincian-subskala">Subskala</h3>
+            </div>
+            <p id="scaleSectionDescription"></p>
+          </div>
+          <div class="scale-grid" id="scaleGrid"></div>
+        </section>
+
+        <section class="interpretation">
+          <h3>Tolok Ukur Skor Total</h3>
+          <div class="benchmark-grid" id="benchmarkGrid"></div>
+        </section>
+      </section>
+
+      <section class="reference-panel test-content" aria-labelledby="referensi">
+        <h2 id="referensi">Dasar Tes</h2>
+        <p id="referenceText"></p>
+      </section>
+    </section>
+  </main>
+
+  <section id="historyDetailModal" class="detail-modal" aria-labelledby="historyDetailModalTitle" aria-modal="true" role="dialog" hidden>
+    <div class="detail-modal-backdrop" data-close-history-detail></div>
+    <div class="detail-modal-card">
+      <div class="detail-modal-toolbar">
+        <div>
+          <p class="eyebrow">Detail Riwayat</p>
+          <h2 id="historyDetailModalTitle">Detail Hasil Test</h2>
+        </div>
+        <button class="modal-close-button" type="button" aria-label="Tutup detail" data-close-history-detail>×</button>
+      </div>
+      <div id="historyDetailPanel" class="history-detail-panel"></div>
+      <div class="modal-share-actions">
+        <button id="modalPrintHistoryBtn" class="ghost-button" type="button">Print / PDF</button>
+        <button id="modalWhatsappHistoryBtn" class="ghost-button" type="button">WhatsApp</button>
+        <button id="modalEmailHistoryBtn" class="ghost-button" type="button">Email</button>
+        <button id="modalShareHistoryBtn" class="ghost-button" type="button">Bluetooth / Lainnya</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
